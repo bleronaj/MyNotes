@@ -46,7 +46,6 @@ class ListNotesViewController: UIViewController {
         searchController.searchBar.delegate = self
         searchController.delegate = self
     }
-   
     @IBAction func createNewNoteClicked(_ sender: UIButton) {
         goToEditNote(createNote())
     }
