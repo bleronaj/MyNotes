@@ -12,6 +12,7 @@
 		028B30DE2B8DE07F00566694 /* MyNotes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 028B30DC2B8DE07F00566694 /* MyNotes.xcdatamodeld */; };
 		028B30E12B8DE2CE00566694 /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028B30DF2B8DE2CE00566694 /* Note+CoreDataClass.swift */; };
 		028B30E22B8DE2CE00566694 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028B30E02B8DE2CE00566694 /* Note+CoreDataProperties.swift */; };
+		028B30E52B8DF61D00566694 /* EditNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028B30E42B8DF61D00566694 /* EditNoteViewController.swift */; };
 		028C802A2B8D1F33007C77AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C80292B8D1F33007C77AD /* AppDelegate.swift */; };
 		028C802C2B8D1F33007C77AD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C802B2B8D1F33007C77AD /* SceneDelegate.swift */; };
 		028C802E2B8D1F33007C77AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028C802D2B8D1F33007C77AD /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 		028B30DD2B8DE07F00566694 /* MyNotes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyNotes.xcdatamodel; sourceTree = "<group>"; };
 		028B30DF2B8DE2CE00566694 /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataClass.swift"; path = "../../Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		028B30E02B8DE2CE00566694 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		028B30E42B8DF61D00566694 /* EditNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteViewController.swift; sourceTree = "<group>"; };
 		028C80262B8D1F33007C77AD /* MyNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028C80292B8D1F33007C77AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		028C802B2B8D1F33007C77AD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		028B30D12B8DDA6700566694 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				028B30E32B8DF5FC00566694 /* EditNote */,
 				028B30D22B8DDA7600566694 /* ListNotes */,
 			);
 			path = Views;
@@ -74,6 +77,14 @@
 				028B30DC2B8DE07F00566694 /* MyNotes.xcdatamodeld */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		028B30E32B8DF5FC00566694 /* EditNote */ = {
+			isa = PBXGroup;
+			children = (
+				028B30E42B8DF61D00566694 /* EditNoteViewController.swift */,
+			);
+			path = EditNote;
 			sourceTree = "<group>";
 		};
 		028C801D2B8D1F32007C77AD = {
@@ -188,6 +199,7 @@
 				028B30E12B8DE2CE00566694 /* Note+CoreDataClass.swift in Sources */,
 				028B30D42B8DDAA600566694 /* ListNotesViewsController.swift in Sources */,
 				028B30D62B8DDBE700566694 /* ListNoteTableViewCell.swift in Sources */,
+				028B30E52B8DF61D00566694 /* EditNoteViewController.swift in Sources */,
 				028B30E22B8DE2CE00566694 /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
