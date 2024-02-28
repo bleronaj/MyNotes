@@ -2,10 +2,8 @@
 //  Note+CoreDataClass.swift
 //  MyNotes
 //
-//  Created by blerona on 27.2.24.
+//  Created by blerona on 28.2.24.
 //
-
-
 import Foundation
 import CoreData
 

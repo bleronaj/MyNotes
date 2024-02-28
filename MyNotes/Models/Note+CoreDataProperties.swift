@@ -2,20 +2,24 @@
 //  Note+CoreDataProperties.swift
 //  MyNotes
 //
-//  Created by blerona on 27.2.24.
+//  Created by blerona on 28.2.24.
 //
 import Foundation
 import CoreData
 
-@objc(Note)
-public class Note: NSManagedObject {
-    var title: String {
-        return text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines).first ?? "" // returns the first line of the text
+
+extension Note {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Note> {
+        return NSFetchRequest<Note>(entityName: "Note")
     }
-   
-    var desc: String {
-        var lines = text.trimmingCharacters(in: .whitespacesAndNewlines).components(separatedBy: .newlines)
-        lines.removeFirst()
-        return "\(lastUpdated.format()) \(lines.first ?? "")" // return second line
-    }
+
+    @NSManaged public var id: UUID!
+    @NSManaged public var text: String!
+    @NSManaged public var lastUpdated: Date!
+
+}
+
+extension Note : Identifiable {
+
 }
