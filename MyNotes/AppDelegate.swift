@@ -2,9 +2,8 @@
 //  AppDelegate.swift
 //  MyNotes
 //
-//  Created by Emmanuel Okwara on 19/08/2021.
+//  Created by blerona on 27.2.24.
 //
-
 import UIKit
 
 @main
