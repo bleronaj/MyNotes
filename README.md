@@ -22,7 +22,7 @@ This project is created with a passion for iOS app development and aims to provi
 
 ## Contribution
 
-Contributions are welcome! If you have suggestions for improvements or encounter any issues, please open an issue or submit a pull request.
+We welcome contributions from the community to help make MyNotes even better! If you have any suggestions for improvements, new features, or encounter any issues while using the app, please don't hesitate to open an issue or submit a pull request. Your contributions are highly appreciated and will help us in our mission to create a top-notch note-taking iOS app.
 
 ## Author
 
