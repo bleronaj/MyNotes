@@ -1,4 +1,4 @@
-MyNotes
+##MyNotes
 MyNotes is a simple iOS application for personal note-taking developed in Xcode using Swift, Core Data, and Storyboard.
 
 Contents
