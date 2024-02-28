@@ -2,9 +2,8 @@
 //  EditNoteViewController.swift
 //  MyNotes
 //
-//  Created by blerona on 27.2.24.
+//  Created by Emmanuel Okwara on 19/08/2021.
 //
-
 
 import UIKit
 
