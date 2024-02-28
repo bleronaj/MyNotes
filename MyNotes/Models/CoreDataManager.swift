@@ -27,6 +27,13 @@ class CoreDataManager {
             }
             completion?()
         }
+    }   func save() {
+        if viewContext.hasChanges {
+            do {
+                try viewContext.save()
+            } catch {
+                print("An error ocurred while saving: \(error.localizedDescription)")
+            }
+        }
     }
-   
 }
