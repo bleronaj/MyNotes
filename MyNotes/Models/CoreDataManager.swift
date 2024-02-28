@@ -27,7 +27,9 @@ class CoreDataManager {
             }
             completion?()
         }
-    }   func save() {
+    }
+   
+    func save() {
         if viewContext.hasChanges {
             do {
                 try viewContext.save()
@@ -35,32 +37,36 @@ class CoreDataManager {
                 print("An error ocurred while saving: \(error.localizedDescription)")
             }
         }
-    }extension CoreDataManager {
-        func createNote() -> Note {
-            let note = Note(context: viewContext)
-            note.id = UUID()
-            note.text = ""
-            note.lastUpdated = Date()
-            save()
-            return note
+    }
+}
+
+// MARK:- Helper functions
+extension CoreDataManager {
+    func createNote() -> Note {
+        let note = Note(context: viewContext)
+        note.id = UUID()
+        note.text = ""
+        note.lastUpdated = Date()
+        save()
+        return note
+    }
+   
+    func fetchNotes(filter: String? = nil) -> [Note] {
+        let request: NSFetchRequest<Note> = Note.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(keyPath: \Note.lastUpdated, ascending: false)
+        request.sortDescriptors = [sortDescriptor]
+       
+        if let filter = filter {
+            let predicate = NSPredicate(format: "text contains[cd] %@", filter)
+            request.predicate = predicate
         }
        
-        func fetchNotes(filter: String? = nil) -> [Note] {
-            let request: NSFetchRequest<Note> = Note.fetchRequest()
-            let sortDescriptor = NSSortDescriptor(keyPath: \Note.lastUpdated, ascending: false)
-            request.sortDescriptors = [sortDescriptor]
-           
-            if let filter = filter {
-                let predicate = NSPredicate(format: "text contains[cd] %@", filter)
-                request.predicate = predicate
-            }
-           
-            return (try? viewContext.fetch(request)) ?? []
-        }
-       
-        func deleteNote(_ note: Note) {
-            viewContext.delete(note)
-            save()
-        }
+        return (try? viewContext.fetch(request)) ?? []
+    }
+   
+    func deleteNote(_ note: Note) {
+        viewContext.delete(note)
+        save()
         
     }
+}
