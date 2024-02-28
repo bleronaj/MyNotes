@@ -153,3 +153,23 @@ extension ListNotesViewController: ListNotesDelegate {
         allNotes.remove(at: indexForNote(id: id, in: allNotes).row)
     }
 }
+
+
+// MARK: - Alert Dialog Handling
+extension ListNotesViewController {
+    private func showDeleteConfirmationAlert(for note: Note) {
+        let confirmationAlert = UIAlertController(title: "Confirm Deletion", message: "Are you sure you want to delete this note?", preferredStyle: .alert)
+        confirmationAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        confirmationAlert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
+            self?.deleteNoteFromStorage(note)
+            self?.showSuccessAlert() // Call success alert after deletion
+        }))
+        present(confirmationAlert, animated: true)
+    }
+
+    private func showSuccessAlert() {
+        let successAlert = UIAlertController(title: "Success", message: "Note deleted successfully!", preferredStyle: .alert)
+        successAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(successAlert, animated: true)
+    }
+}
